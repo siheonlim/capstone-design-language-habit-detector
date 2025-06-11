@@ -1,0 +1,129 @@
+.user-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+    padding: 2rem;
+}
+
+.user-content {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.user-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.user-title {
+    font-size: 3rem;
+    color: #1f2d3d;
+    margin-bottom: 0.25rem;
+}
+
+.user-subtitle {
+    font-size: 1.2rem;
+    color: #6b7280;
+}
+
+.user-dashboard {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.user-left-column,
+.user-right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.user-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.user-stats-card {
+    background: #ffffff;
+    padding: 1.8rem;
+    border-radius: 18px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user-stats-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.user-stats-title {
+    font-size: 1.2rem;
+    color: #334155;
+    margin-bottom: 0.3rem;
+}
+
+.user-stats-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #0ea5e9;
+    margin-bottom: 0.25rem;
+}
+
+.user-stats-description {
+    font-size: 0.95rem;
+    color: #94a3b8;
+}
+
+.user-section {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 1.8rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.user-section-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+}
+
+.user-section-content {
+    min-height: 280px;
+}
+
+/* 최근 기록만 스크롤 영역 */
+.scrollable {
+    max-height: 320px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+/* 반응형 */
+@media (max-width: 1200px) {
+    .user-dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .user-container {
+        padding: 1rem;
+    }
+
+    .user-title {
+        font-size: 2.2rem;
+    }
+
+    .user-subtitle {
+        font-size: 1rem;
+    }
+
+    .user-stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
